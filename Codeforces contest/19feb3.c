@@ -22,7 +22,7 @@ int main(){
         }
 
         for(int k=0; k<n; k++){
-            if(arr[k]>9) sumofdigits(arr[k]);
+            if(arr[k]>9) arr[k]=sumofdigits(arr[k]);
         }
 
         int ans = 0;
@@ -34,7 +34,6 @@ int main(){
         printf("%d\n",ans);
 
     }
-
 
     return 0;
 }
