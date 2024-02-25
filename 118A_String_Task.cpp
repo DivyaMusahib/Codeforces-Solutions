@@ -19,7 +19,6 @@ int main(){
 
     for(int k=0; k<arr.size(); k++){
         cout << "." << arr[k];
-        // cout << arr[k];
     }
     
     return 0;
