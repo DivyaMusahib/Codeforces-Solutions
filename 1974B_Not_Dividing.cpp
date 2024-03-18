@@ -12,12 +12,16 @@ int main(){
         vector<int>arr(n);
         for(int j=0; j<n; j++){
             cin >> arr[j];
-            if(j!=0){
-                if((arr[j]%arr[j-1]==0) && arr[j-1]!=1){arr[j]+=1;}
-                else if(arr[j-1]==1){
-                    arr[j-1]++;
-                    if(arr[j]%arr[j-1]==0){arr[j]+=1;}
-                }
+            if(j!=0 && arr[j-1]!=1 && arr[j]!=1){
+                if((arr[j]%arr[j-1]==0)){arr[j]+=1;}
+            }
+            if(arr[j-1]==1){
+                arr[j-1]+=1;
+                if((arr[j]%arr[j-1]==0)){arr[j]+=1;}
+            }
+            if(arr[j]==1){
+                arr[j]+=1;
+                if((arr[j]%arr[j-1]==0)){arr[j]+=1;}
             }
         }
 
