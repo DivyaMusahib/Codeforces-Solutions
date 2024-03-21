@@ -1,27 +1,3 @@
-// #include<bits/stdc++.h>
-// using namespace std;
-
-// int main(){
-//     int n,m;
-//     cin >> n >> m;
-//     int ans;
-//     int k = n/2;
-
-//     if(n % 2 == 0){
-//         // if(k/m>0) ans = k+ k%m;
-//         if(k/m>0) ans = k+ (m-k%m);
-//         // else ans = m;
-//     }
-
-//     else{
-//         ans = (k + 1) + (m - (k+ 1)%m);
-//     }
-
-//     if(m>n) cout << -1;
-//     else cout << ans;
-// }
-
-
 #include<bits/stdc++.h>
 using namespace std;
 
