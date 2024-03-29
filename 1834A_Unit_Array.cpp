@@ -19,20 +19,18 @@ int main(){
         }
 
         int x = countminus1 - count1;
-        int y = ceil(x/2);
+        int y = ceil(x/2.0);
 
         if(x<=0){
-            if(countminus1%2==0) cout << 0 << " is the answer\n";
-            else cout << 1 << " is the answer\n";
+            if(countminus1%2==0) cout << 0 << "\n";
+            else cout << 1 << "\n";
         } 
         else{
-            if(countminus1%2==0) cout <<  y << " is the answer\n";
-            else{
-                if(y%2==0) cout << y + 1 << " is the answer\n";
-                else cout << y << " is the answer\n";
-            }
+            count1 += y;
+            countminus1 -= y;
+            if(countminus1%2==0) cout << y << "\n";
+            else cout << y + 1 << "\n";
         }
-
     } 
     return 0;
 }
