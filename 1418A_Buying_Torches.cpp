@@ -9,9 +9,11 @@ int main(){
 
         long long minrequiredstick= y*k + k;
         count += k;
-        cout << count << "\n";
-        count += ceil((minrequiredstick-1)/(x-1.0));
+        long long temp1 = (minrequiredstick-1);
+        long long temp2 = (x-1);
+        if(temp1 % temp2==0) count += temp1/temp2;
+        else count += (temp1/temp2) + 1;
 
-        cout << count;
+        cout << count << endl;
     }
 }
