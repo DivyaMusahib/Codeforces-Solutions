@@ -2,7 +2,7 @@
 using namespace std;
 
 int main(){
-    string s,temp;
+    string s,t;
     cin >> s;
     bool ans;
 
@@ -14,13 +14,17 @@ int main(){
         }
 
         if(ans == true){
-            for(int i=0; i<(s.length())/2; i++){
-                if(s[i]==s[s.length()-i]) ans=true;
-                else{
-                    ans = false;
-                    break;
-                }
+            t = s;
+        reverse(t.begin(),t.end());
+        for(long long i=0; i<s.size(); i++){
+            if(s[i] == t[i]){
+                ans= true;
             }
+            else{
+                ans = false;
+                break;
+            }
+        }
         }
     }
 
