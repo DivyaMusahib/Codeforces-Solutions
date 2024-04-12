@@ -17,5 +17,4 @@ int main(){
         cout << "YES\n";
         cout << arr[0] << " " << arr[n-1];
     }
-
 }
