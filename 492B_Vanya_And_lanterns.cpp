@@ -30,7 +30,7 @@ int main(){
     long long temp1 = arr[0];
     long long temp2 = l-arr[n-1];
 
-    if(temp1>ans && temp1>temp2) ans = temp1;
+    if(temp1>ans && temp1>=temp2) ans = temp1;
     else if(temp2>ans && temp2>temp1) ans = temp2;
 
     // cout << ans;
