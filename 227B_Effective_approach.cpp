@@ -1,3 +1,30 @@
+// #include<bits/stdc++.h>
+// using namespace std;
+
+// int main(){
+//     long long n;
+//     cin >> n;
+//     vector<int>arr(n);
+//     for(int i=0; i<n; i++){
+//         cin >> arr[i];
+//     }
+
+//     long long m;
+//     cin >> m;
+//     int items[m];
+//     long long ans1 =0, ans2=0;
+//     for(int j=0; j<m; j++){
+//         cin >> items[j];
+//         ans1 = ans1+ lower_bound(arr.begin(),arr.end(),items[j]) - arr.begin() + 1;
+//     }
+
+
+//     cout << ans1 << " " << ans2;
+// }
+
+
+
+
 #include<bits/stdc++.h>
 using namespace std;
 
