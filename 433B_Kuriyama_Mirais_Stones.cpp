@@ -9,6 +9,7 @@ int main(){
     vector<long long>arr(n);
     vector<long long>arr_sum;
     vector<long long>will_sort_arr(n);
+    vector<long long>will_sort_arr_sum;
 
     for(long long i=0; i<n; i++){
         cin >> arr[i];
@@ -17,7 +18,14 @@ int main(){
         will_sort_arr[i]=arr[i];
     }
 
+
     sort(will_sort_arr.begin(),will_sort_arr.end());
+
+    sum=0;
+    for(long long i=0; i<n; i++){
+        sum += will_sort_arr[i];
+        will_sort_arr_sum.push_back(sum);
+    }
 
     long long m;
     cin >> m;
@@ -37,10 +45,12 @@ int main(){
 
         if(t==2){
             long long sum =0;
-            for(long long k=l-1; k<r; k++){
-                sum += will_sort_arr[k];
+            if(l>1){
+                cout << will_sort_arr_sum[r-1] - will_sort_arr_sum[l-2] << endl;
             }
-            cout << sum << "\n";
+            else{
+                cout << will_sort_arr_sum[r-1] << endl;
+            }
         }
 
     }
