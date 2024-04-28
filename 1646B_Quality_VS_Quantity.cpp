@@ -20,13 +20,13 @@ int main(){
 
         bool ans = false;
 
-        for(int i=1, j=n-1; i<n; i++){
+        for(int i=1, j=n-1; i<=n/2 && j>n/2; i++){
             sum1 += arr[i];
             if(sum1>sum2){
                 j--;
-                sum2 += arr[j];
+                if(j>n/2) sum2 += arr[j];
             }
-            if(sum1<sum2 && i>(j-n+1)){
+            if(sum1<sum2 && i>(n-1-j)){
                 ans = true;
                 break;
             }
