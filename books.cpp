@@ -10,20 +10,15 @@ int main(){
         cin >> timeReq[i];
     }
 
-    long long maxi =0;
-    
+    int sum=0, ans=0, j=0;
     for(int i=0; i<n; i++){
-        long long temp =0;
-        long long count =0;
-        for(int j=i; j<n; j++){
-            if((temp + timeReq[j]) <= tMax){
-                temp += timeReq[j];
-                count++;
-            }
-            else break;
+        while(j<n && (sum + timeReq[j])<= tMax){
+            sum += timeReq[j];
+            j++;
         }
-        if(count>maxi) maxi = count;
+        ans = max(ans, j-i);
+        sum -= timeReq[i]; // slide window
     }
+    cout << ans;
 
-    cout << maxi;
 }
