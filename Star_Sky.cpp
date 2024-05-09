@@ -17,10 +17,7 @@ int main(){
     for(int temp=0; temp<q; temp++){
         int t, x1, y1, x2, y2;
         cin >> t >> x1 >> y1 >> x2 >> y2;
-        // x1--;
-        // x2--;
-        // y1--;
-        // y2--;
+        
 
         int arr[101][101] = {0};
 
