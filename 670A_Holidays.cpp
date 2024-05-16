@@ -11,7 +11,7 @@ int main(){
     if(n%7 >=2){
         maxHoliday += 2;
     }
-    else maxHoliday += 1;
+    else if(n%7 ==1)maxHoliday += 1;
 
     if(n%7 == 6 ) minHoliday += 1;
     if(n%7 == 7 ) minHoliday += 1;
