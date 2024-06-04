@@ -59,8 +59,9 @@ int main(){
             // cout << ans << "\n";
             int j = arr[i].second;
             // cout << i << "-> i " << j << "->j\n";
-            for(int k = i+1; k<=j; k++){
-                if(j== n+1) break;
+            int k = i+1;
+            for(; k<=j && k != (n+1); k++){
+                // if(j== n+1) break;
                 if(arr[k].second < j){
                     j = arr[k].second;
                     break;
@@ -68,6 +69,7 @@ int main(){
             }
             ans += j-i;
             // cout << i << "-> i " << j << "->j\n";
+            // cout << i << "-> i " << j << "->j " << ans << "\n";
         }
 
         cout << ans << "\n";
