@@ -12,14 +12,14 @@ int main(){
     int home= n-1;
     vector<int>count(100001,0);
     for(int i=0; i<n; i++){
-        count[arr[i].second]++;
+        count[arr[i].first]++;
 
     }
-    cout << "ans \n";
+    // cout << "ans \n";
     for(int i=0; i<n; i++){
         int home = n-1;
-        int away = n - 1 - count[arr[i].first];
-        home += count[arr[i].first];
+        int away = n - 1 - count[arr[i].second];
+        home += count[arr[i].second];
         cout << home << " " << away << "\n";
 
     }
