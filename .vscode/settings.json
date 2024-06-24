@@ -7,5 +7,7 @@
         "functional": "cpp",
         "vector": "cpp",
         "iomanip": "cpp"
-    }
+    },
+    "terminal.integrated.mouseWheelZoom": false,
+    "terminal.integrated.fontSize": 14
 }
