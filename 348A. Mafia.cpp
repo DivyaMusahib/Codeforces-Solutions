@@ -13,7 +13,9 @@ void solve() {
         cin >> arr[i];
         sum += arr[i];
     }
-    cout << ceil((float)sum/(float)(n-1));
+    ll ans = max( (sum + n - 2)/(n-1), *max_element(arr.begin(),arr.end()));
+    cout << ans;
+    
 }
 
 int main() {

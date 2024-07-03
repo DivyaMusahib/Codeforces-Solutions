@@ -1,19 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-#define yes cout << "YES";
-#define no cout << "NO";
+#define yes cout << "YES\n";
+#define no cout << "NO\n";
+#define MOD 1000000007 
 
 void solve() {
-    ll x ,y,n;
+    ll x, y, n;
     cin >> x >> y >> n;
-    if(n%6 == 1) cout << (x+1000000007)%1000000007;
-    else if(n%6 == 2) cout << (y+1000000007)%1000000007;
-    else if(n%6 == 3) cout << (y+1000000007)%1000000007-(((x+1000000007)%1000000007) + 1000000007) % 1000000007;
-    else if(n%6 == 4) cout << -(x+1000000007)%1000000007;
-    else if(n%6 == 5) cout << -(y+1000000007)%1000000007;
-    else if(n%6 == 0) cout << (((x+1000000007)%1000000007) + 1000000007) % 1000000007 -(y+1000000007)%1000000007;
+    if (n % 6 == 1) cout << (x % MOD + MOD) % MOD << "\n";
+    else if (n % 6 == 2) cout << (y % MOD + MOD) % MOD << "\n";
+    else if (n % 6 == 3) cout << ((y % MOD - x % MOD) % MOD + MOD) % MOD << "\n";
+    else if (n % 6 == 4) cout << (-x % MOD + MOD) % MOD << "\n";
+    else if (n % 6 == 5) cout << (-y % MOD + MOD) % MOD << "\n";
+    else if (n % 6 == 0) cout << ((-y % MOD + x % MOD) % MOD + MOD) % MOD << "\n";
 }
+// (-x % MOD + MOD) % MOD ensures that the result is within [0, MOD-1] even if -x % MOD is negative.
 
 int main() {
     ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
