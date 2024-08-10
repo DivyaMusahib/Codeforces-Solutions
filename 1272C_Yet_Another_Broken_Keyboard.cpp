@@ -1,3 +1,4 @@
+// Method -1 
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -36,4 +37,46 @@ int main(){
 
     cout << ans ;
 
+}
+
+// Method -2 hashing
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n, m;
+    cin >> n >> m;
+    string s;
+    cin >> s;
+    unordered_map<char, int> mp;
+
+    for (int i = 0; i < m; i++) {
+        char x; 
+        cin >> x;
+        mp[x]++;
+    }
+
+    long long ans = 0;
+    int start = -1, end = -1;
+
+    for (int i = 0; i < n; i++) {
+        if (mp.find(s[i]) != mp.end()) {
+            if (start == -1) start = i + 1;
+            end = i + 1;
+        } else {
+            if (start != -1) {
+                long long length = end - start + 1;
+                ans += (length * (length + 1)) / 2;
+            }
+            start = -1;
+            end = -1;
+        }
+    }
+
+    if (start != -1) {
+        long long length = end - start + 1;
+        ans += (length * (length + 1)) / 2;
+    }
+
+    cout << ans << "\n";
 }
